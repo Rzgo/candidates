@@ -1,0 +1,8 @@
+.allСandidates {
+  padding-top: 50px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}

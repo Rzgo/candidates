@@ -1,0 +1,18 @@
+@import './assets/styles/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 50px;
+  background-color: #f9f5f0;
+  color: #070707;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}

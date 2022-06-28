@@ -1,0 +1,26 @@
+@import 'src/assets/styles/variables';
+
+.navbar {
+  width: 100%;
+  padding-top: 30px;
+
+  &__wrapper {
+    padding: 0 0 40px 0;
+    list-style-type: none;
+    display: flex;
+    border-bottom: 1px solid $secondary-text-color;
+  }
+  &__item {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 100px;
+    color: $secondary-text-color;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &_active {
+      color: $primary-text-color;
+    }
+  }
+}

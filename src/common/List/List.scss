@@ -1,0 +1,57 @@
+@import 'src/assets/styles/variables';
+
+.list {
+  min-width: 710px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  &__row {
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 1px solid $border-color;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px repeat(4, 170px);
+    gap: 20px;
+
+    &_isTitle {
+      font-weight: 500;
+      border-bottom: 2px solid $border-color;
+      color: $secondary-text-color;
+    }
+    &_forEditing {
+      grid-template-columns: 40px repeat(4, 170px) 100px;
+    }
+  }
+  &__title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    max-width: 170px;
+    overflow-wrap: break-word;
+
+    &:first-child {
+      cursor: default;
+    }
+    &-title_active {
+      color: $primary-text-color;
+    }
+  }
+  &__buttons-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__arrow-icon {
+    color: $border-color;
+    &_active {
+      color: $primary-text-color;
+    }
+    &_reverse {
+      transform: rotate(180deg);
+    }
+  }
+}

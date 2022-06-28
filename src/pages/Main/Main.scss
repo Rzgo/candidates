@@ -1,0 +1,22 @@
+.main {
+  padding-top: 20px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    width: 60%;
+    margin: 0 30px 0 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  &__logo {
+    width: 250px;
+    height: 250px;
+  }
+  &__button-wrapper {
+    padding-top: 50px;
+    display: flex;
+  }
+}

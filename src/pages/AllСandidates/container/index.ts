@@ -1,0 +1,1 @@
+export { AllСandidates } from './AllСandidates';

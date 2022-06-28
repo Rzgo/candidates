@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+import { RootStateProvider } from './store/RootStateContext';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+
+import ruLocale from 'date-fns/locale/ru';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ruLocale}>
+      <RootStateProvider>
+        <App />
+      </RootStateProvider>
+    </LocalizationProvider>
   </React.StrictMode>
 );
 
