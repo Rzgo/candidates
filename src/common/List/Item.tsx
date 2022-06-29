@@ -11,20 +11,20 @@ import EditIcon from '@material-ui/icons/Edit';
 
 interface IProps {
   number: number;
-  condidate: IСandidate;
+  candidate: IСandidate;
   forEditing?: boolean;
 }
 
-export const Item: React.FC<IProps> = ({ number, condidate, forEditing }): JSX.Element => {
+export const Item: React.FC<IProps> = ({ number, candidate, forEditing }): JSX.Element => {
   const navigate = useNavigate();
   const { candidatesStore } = useRootStore();
 
   const personalDatas = [
     number,
-    condidate.surname,
-    condidate.name,
-    condidate.patronymic,
-    condidate.birthday,
+    candidate.surname,
+    candidate.name,
+    candidate.patronymic,
+    candidate.birthday,
   ];
 
   return (
@@ -40,14 +40,14 @@ export const Item: React.FC<IProps> = ({ number, condidate, forEditing }): JSX.E
           <IconButton
             aria-label="edit"
             color="primary"
-            onClick={() => navigate(`/all_candidates?id=${condidate.id}`)}
+            onClick={() => navigate(`/all_candidates?id=${candidate.id}`)}
           >
             <EditIcon fontSize="small" />
           </IconButton>
           <IconButton
             aria-label="delete"
             color="secondary"
-            onClick={() => candidatesStore.deleteCandidate(condidate.id)}
+            onClick={() => candidatesStore.deleteCandidate(candidate.id)}
           >
             <DeleteIcon fontSize="small" />
           </IconButton>

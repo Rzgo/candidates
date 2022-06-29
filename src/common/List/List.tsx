@@ -28,7 +28,7 @@ export const List: React.FC<IProps> = ({
       />
 
       {currentArray.map((item, index) => (
-        <Item key={item.id} number={++index} condidate={item} forEditing={forEditing} />
+        <Item key={item.id} number={++index} candidate={item} forEditing={forEditing} />
       ))}
     </ul>
   );
